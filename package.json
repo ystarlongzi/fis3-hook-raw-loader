@@ -1,0 +1,22 @@
+{
+  "name": "fis3-hook-raw-loader",
+  "version": "1.0.0",
+  "description": "A raw loader plugin for fis3.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ystarlongzi/fis3-hook-raw-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/ystarlongzi/fis3-hook-raw-loader/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "keywords": [
+    "fis3",
+    "raw-loader"
+  ],
+  "author": "zhangzilong.zzl@163.com",
+  "license": "ISC"
+}
