@@ -20,15 +20,15 @@ function onProcessStart(file) {
   file.setContent(content);
 }
 
-function onProcessEnd(file) {
+function onCompileEnd(file) {
   if (!legalFiles[file.getId()]) {
     return;
   }
 
   var content = file.getContent();
-  var reg = /__fis__raw\("(!*)raw!(.+?)"\)/g;
+  var reg = /__fis__raw\(("|')(!*)(?:raw)?!(.+?)\1\)/g;
 
-  content = content.replace(reg, function (str, isSource, value) {
+  content = content.replace(reg, function (str, quote, isSource, value) {
     var rawFile = fis.project.lookup(value, file).file;
     var newStr;
 
@@ -58,6 +58,6 @@ function onProcessEnd(file) {
 
 module.exports = function (fis) {
   fis.on('process:start', onProcessStart);
-  fis.on('process:end', onProcessEnd);
+  fis.on('compile:end', onCompileEnd);
 };
 
