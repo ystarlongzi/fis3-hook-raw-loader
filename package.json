@@ -1,6 +1,6 @@
 {
   "name": "fis3-hook-raw-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A raw loader plugin for fis3.",
   "repository": {
     "type": "git",
