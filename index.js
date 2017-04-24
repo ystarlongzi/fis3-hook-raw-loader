@@ -53,6 +53,10 @@ function onCompileEnd(file) {
   });
 
   file.setContent(content);
+
+  if (file.cache) {
+    file.cache.save(content, file.getCacheData());
+  }
 }
 
 
